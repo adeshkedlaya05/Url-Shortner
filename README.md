@@ -45,7 +45,7 @@ A simple URL shortener web application built with Django that allows users to sh
 ### Prerequisites
 
 - Docker
-- AWS account (optional, for deployment)
+- AWS account 
 - Terraform (optional, for infrastructure automation)
 - DockerHub Account
 
