@@ -40,16 +40,6 @@ A simple URL shortener web application built with Django that allows users to sh
 
 ---
 
-## Getting Started
-
-### Prerequisites
-
-- Docker
-- AWS account 
-- Terraform 
-- DockerHub Account
-- Django
-- Python
 
 ### DockerHub Repository
 https://hub.docker.com/repository/docker/adeshkedlaya2003/url/general
