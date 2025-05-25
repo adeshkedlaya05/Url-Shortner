@@ -40,14 +40,13 @@ A simple URL shortener web application built with Django that allows users to sh
 
 ---
 
-
-### DockerHub Repository
-https://hub.docker.com/repository/docker/adeshkedlaya2003/url/general
+### Output 
+![Screenshot 2025-05-25 175616](https://github.com/user-attachments/assets/ef4dd749-07ed-4e4c-9215-5feea870451c)
 
 ---
 
-### Output 
-![Screenshot 2025-05-25 175616](https://github.com/user-attachments/assets/ef4dd749-07ed-4e4c-9215-5feea870451c)
+### DockerHub Repository
+https://hub.docker.com/repository/docker/adeshkedlaya2003/url/general
 
 ---
 
