@@ -7,7 +7,7 @@ A simple URL shortener web application built with Django that allows users to sh
 ## Features
 
 - Shorten any valid URL to a short, unique code.
-- Set expiry time (hours, minutes, seconds) for each shortened URL.
+- Users can set expiry time (hours, minutes, seconds) for each shortened URL.
 - Redirect users to the original URL if the short URL is still valid.
 - Show a "not found" page if the URL has expired or does not exist.
 - **Implemented SOLID design principles** for clean, maintainable, and scalable code.
@@ -35,3 +35,5 @@ A simple URL shortener web application built with Django that allows users to sh
 ### Clone the repository
 ```bash
 git clone https://github.com/your-username/your-repo.git
+
+
