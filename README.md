@@ -1,4 +1,4 @@
-# URL Shortener with Expiry Time
+# URL Shortener 
 
 A simple URL shortener web application built with Django that allows users to shorten URLs and set a custom expiry time after which the shortened URL will no longer work.
 
