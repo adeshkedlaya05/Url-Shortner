@@ -24,6 +24,22 @@ A simple URL shortener web application built with Django that allows users to sh
 
 ---
 
+### Architecture diagram
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/518f337e-69d9-4873-9c55-52a6a854c42d"
+ alt="Architecture Diagram" width="600"/>
+</p>
+
+---
+
+### AWS Architecture diagram
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5661832f-a8d4-4309-a929-bf10c73da2ff"
+ alt="Architecture Diagram" width="600"/>
+</p>
+
+---
+
 ## Getting Started
 
 ### Prerequisites
