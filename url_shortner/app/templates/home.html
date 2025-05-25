@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>URL Shortener</title>
+  {% load static %}
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background: #000; /* fallback background */
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden; /* hide bubbles overflow */
+  position: relative; /* for absolutely positioned bubbles */
+}
+
+/* Container for bubbles */
+.bubble-container {
+  position: fixed;       /* Fix position relative to viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;  /* So bubbles don’t block clicks */
+  overflow: hidden;
+  z-index: 0;            /* Behind everything */
+}
+/* Bubble style */
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation-name: rise;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Rise animation */
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1.5);
+    opacity: 1;
+  }
+}
+
+
+
+    .page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 1000px; /* Maximum width for the page content */
+    }
+
+
+  .container {
+   color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;               /* Make sure it takes the available width */
+    max-width: 1000px;          /* Ensure a max width for the container */
+    margin: 0 auto;            /* Center the container horizontally */
+    background-color: white;
+    position: relative;       /* create stacking context */
+    z-index: 1;   
+
+}
+    .container h1 {
+      color: black;
+    }
+
+    input[type="text"], .timer-inputs input {
+      padding: 10px;
+      margin: 10px 0;
+      width: 90%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .timer-inputs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #ff0400;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      width: 200px;
+      font-size: larger;
+    }
+
+    button:hover {
+      background-color: #014d13;
+    }
+
+    #message, #countdown {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    #shortened-url-container {
+      margin-top: 20px;
+      display: none;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    #copy-button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: medium;
+    }
+
+    #copy-button:hover {
+      background-color: #218838;
+    }
+    
+    #shortened-url {
+      color: black; /* Ensure the shortened URL text is black */
+    }
+
+  </style>
+  <script src="{% static 'script.js' %}" defer></script>
+</head>
+
+<body>
+ <div class="bubble-container">
+  <div class="bubble" style="width:40px; height:40px; left:10%; background: #FF6B6B; animation-duration: 10s;"></div>
+  <div class="bubble" style="width:30px; height:30px; left:25%; background: #FFD93D; animation-duration: 8s;"></div>
+  <div class="bubble" style="width:50px; height:50px; left:40%; background: #6BCB77; animation-duration: 12s;"></div>
+  <div class="bubble" style="width:35px; height:35px; left:60%; background: #4D96FF; animation-duration: 9s;"></div>
+  <div class="bubble" style="width:45px; height:45px; left:80%; background: #FF6B6B; animation-duration: 11s;"></div>
+</div>
+  <div class="container">
+   
+
+    <h1 style="color: black;">URL Shortener</h1>
+    <input type="text" id="urlInput" placeholder="Enter URL to shorten">
+    <div class="timer-inputs">
+      <input type="number" id="hours" placeholder="HH" min="0" max="23">
+      <span>:</span>
+      <input type="number" id="minutes" placeholder="MM" min="0" max="59">
+      <span>:</span>
+      <input type="number" id="seconds" placeholder="SS" min="0" max="59">
+    </div>
+    <button onclick="submitURL()">Submit</button>
+    <div id="message"></div>
+    <div id="shortened-url-container" style="display:none;">
+      <p style="color: black;">Your Shortened URL: <span id="shortened-url"></span></p>
+      <button id="copy-button">Copy URL</button>
+    </div>
+  </div>
+
+</body>
+</html>

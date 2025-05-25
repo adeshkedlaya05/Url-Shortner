@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <title>redirect</title>
+  <script src="{% static 'script.js' %}" defer></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #021255f1;
+      text-align: center;
+      margin: 0;
+      padding-top: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .status-message {
+      font-size: 82px;
+      color: white;
+      margin-bottom: 20px;
+      max-width: 600px;
+      padding: 0 10px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #ff0400;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      width: 200px;
+      font-size: larger;
+    }
+
+    button:hover {
+      background-color: #014d13;
+    }
+
+    #message, #countdown {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    #shortened-url-container {
+      margin-top: 20px;
+      display: none;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    #copy-button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: medium;
+    }
+
+    #copy-button:hover {
+      background-color: #218838;
+    }
+  </style>
+
+  <script>
+    // This function will redirect to the home page when the button is clicked
+    function Home() {
+      window.location.href = "/";  // Redirecting to home page
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <p class="status-message">
+      OOPs....!<br>
+      Cannot find Page or the link might have been expired
+    </p>
+   
+  </div>
+</body>
+</html>
