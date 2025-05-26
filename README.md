@@ -46,7 +46,7 @@ A simple URL shortener web application built with Django that allows users to sh
 ---
 
 ### DockerHub Repository
-https://hub.docker.com/repository/docker/adeshkedlaya2003/url/general
+https://hub.docker.com/r/adeshkedlaya2003/url
 
 ---
 
