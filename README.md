@@ -17,8 +17,8 @@ A simple URL shortener web application built with Django that allows users to sh
 ## Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript 
-- **Backend:** Django, Gunicorn, WhiteNoise (for static files)
-- **Database:** SQLite (default with Django)
+- **Backend:** Django, Gunicorn, WhiteNoise (for serving static files)
+- **Database:** SQLite 
 - **Containerization:** Docker
 - **Cloud & Infrastructure:** AWS EC2, Terraform
 
