@@ -1,0 +1,73 @@
+.redirect-page {
+  font-family: Arial, sans-serif;
+  background-color: #02219cf1;
+  text-align: center;
+  margin: 0;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.redirect-page .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.redirect-page .status-message {
+  font-size: 82px;
+  color: white;
+  margin-bottom: 20px;
+  max-width: 600px;
+  padding: 0 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.redirect-page button {
+  padding: 10px 20px;
+  background-color: #ff0400;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 200px;
+  font-size: larger;
+}
+
+.redirect-page button:hover {
+  background-color: #014d13;
+}
+
+.redirect-page #message,
+.redirect-page #countdown {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.redirect-page #shortened-url-container {
+  margin-top: 20px;
+  display: none;
+  text-align: center;
+  font-size: 16px;
+}
+
+.redirect-page #copy-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.redirect-page #copy-button:hover {
+  background-color: #218838;
+}

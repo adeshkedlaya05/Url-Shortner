@@ -1,0 +1,146 @@
+/* style.module.css */
+
+.urlShortenerPage {
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.bubbleContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation-name: rise;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1.5);
+    opacity: 1;
+  }
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px 50px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  min-height: 300px;
+  z-index: 1;
+}
+.shortenedUrlContainer {
+  color: black;
+}
+
+.shortenedUrl {
+  color: black;
+}
+
+
+
+
+.message {
+  color: black;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.container h1 {
+  color: black;
+}
+
+.input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.timerInputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #ff0400;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 200px;
+  font-size: larger;
+}
+
+.button:hover {
+  background-color: #014d13;
+}
+
+.shortenedUrlContainer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  display: block; /* We will toggle this with JS */
+}
+
+.copyButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.copyButton:hover {
+  background-color: #218838;
+}
+
+.shortenedUrl {
+  color: black;
+}
