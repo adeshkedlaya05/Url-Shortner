@@ -16,7 +16,7 @@ A simple URL shortener web application built with Django that allows users to sh
 
 ## Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript 
+- **Frontend:** React.js (functional components with Hooks), React Router DOM for routing, CSS Modules for styling, JavaScript (ES6+)
 - **Backend:** Django, Gunicorn, WhiteNoise (for serving static files)
 - **Database:** SQLite 
 - **Containerization:** Docker
