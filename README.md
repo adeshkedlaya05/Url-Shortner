@@ -1,6 +1,6 @@
 # URL Shortner 
 
-A simple URL shortener web application built with Django that allows users to shorten URLs and set a custom expiry time after which the shortened URL will no longer work.
+A fullstack URL shortener web application built with React and Django that allows users to shorten URLs and set a custom expiry time (in hours, minutes, and seconds), after which the shortened URL becomes inactive. The project uses Django REST Framework for the backend API, React for the interactive frontend, and supports production-ready deployment using Docker, Gunicorn, WhiteNoise, and AWS.
 
 ---
 
