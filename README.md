@@ -24,6 +24,23 @@ A simple URL shortener web application that allows users to generate shortened U
 
 ---
 
+## API Endpoints
+
+### 1. POST `/shorten`
+Creates a shortened URL with a specified expiration time (hours, minutes, seconds). Requires a JSON body containing the original URL and expiration details. Returns the generated short URL if successful.
+
+---
+
+### 2. GET `/<short_code>/`
+Redirects to the original URL corresponding to the provided short code. If the link has expired or does not exist, it redirects to the `/expired` route.
+
+---
+
+### 3. GET `/*`
+Catch-all route to serve the React frontend’s `index.html` file for any undefined paths. This supports frontend routing in single-page applications. Returns a 404 if the frontend build file is missing.
+
+---
+
 ### Architecture diagram
 <p align="center">
   <img src="https://github.com/user-attachments/assets/518f337e-69d9-4873-9c55-52a6a854c42d"
